@@ -118,7 +118,7 @@
                   <h5 class="text-left text-dark pt-2 m-0"> {{ $promotion[$x]->product_name }} </h5>
                 </div>
                 <div class="w-100">
-                  <h5 class="text-dark text-right font-weight-bold pt-2 m-0"> {{ $promotion[$x]->product_price_a }} </h5>                           
+                  <h5 class="text-dark text-right font-weight-bold pt-2 m-0"> {{ $promotion[$x]->product_price_b }} </h5>                           
                 </div>
               </div>
               <div class="w-100 mt-3 d-flex justify-content-center">

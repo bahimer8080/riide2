@@ -301,7 +301,7 @@ width: 100%;
                                         @csrf
                                     </form>
                         <img src="/{{ \Auth::user()->avatar }}" width="30" alt="">
-                        <p class="p-0 m-0 pb-2 text.white font-weight-bold text-white text-center w-100" style="font-family: 'Roboto', sans-serif;">{{ \Auth::user()->name }}</p>
+                        <p class="p-0 m-0 pb-2 text.white font-weight-bold text-white text-center w-100" style="font-family: 'Roboto', sans-serif;">{{ explode(" ", \Auth::user()->name )[0] }}</p>
                     </a>
                     @endguest
                 </div>
@@ -349,7 +349,7 @@ width: 100%;
                                         @csrf
                                     </form>
                                     <img src="/{{ \Auth::user()->avatar }}" width="30" alt="">
-                    <p class="p-0 m-0 pb-2 text.white font-weight-bold text-white text-center w-100" style="font-family: 'Roboto', sans-serif;">{{ \Auth::user()->name }}</p>
+                    <p class="p-0 m-0 pb-2 text.white font-weight-bold text-white text-center w-100" style="font-family: 'Roboto', sans-serif;">{{ explode(" ", \Auth::user()->name )[0] }}</p>
                                    
                     
                     @endguest

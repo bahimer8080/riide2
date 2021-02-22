@@ -110,9 +110,9 @@ class AdminController extends Controller
 
     public function categoryDelete($category,$pagination,$id){
         $data = Category::where("id","=",$id)
-            ->get();
-        $data[0]->state = 0;
-        $data[0]->save();
+            ->delete();
+        //$data[0]->state = 0;
+        //$data[0]->save();
         return redirect("/admin/categories/$category/$pagination");
     }
 

@@ -28,10 +28,10 @@
     
         <div class="row w-100">
             <div class="col-md-6 col-sm-12 justify-content-center d-flex">
-                <a href="/es/bienvenido" style="font-size: 25px ; width: 300px ; " class="btn btn-primary btn-block mt-3">Español</a>
+                <a href="/es/bienvenido" style="width: 300px ; font-weight: bold !important;color: white ;" class="btn btn-primary btn-block mt-3">Español</a>
             </div>
             <div class="col-md-6 col-sm-12 justify-content-center d-flex">
-                <a href="/en/bienvenido" style="font-size: 25px ; width: 300px ; " class="btn btn-primary btn-block mt-3">English</a>
+                <a href="/en/bienvenido" style="width: 300px ; font-weight: bold !important;color: white ;" class="btn btn-primary btn-block mt-3">English</a>
             </div>
         </div>
         

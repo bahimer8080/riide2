@@ -27,8 +27,13 @@ class MallController extends Controller
             ->get();
         //dd($banners);
         $data = DB::table('category')
-            ->where("category.parent_id","=",0)
-            ->join('store_category', 'category.id', '=', 'store_category.category_id')
+        ->select(
+	"category.id as id",
+	"category.name as name",
+	"category.image as image"
+)    
+	->where("category.parent_id","=",0)
+            ->leftJoin('store_category', 'category.id', '=', 'store_category.category_id')
             ->select('category.id as id', 'category.name as name','category.image as image', DB::raw("count(store_category.category_id) as count"))
             ->groupBy('category.name')
             ->get();

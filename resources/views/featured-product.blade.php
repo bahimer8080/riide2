@@ -1,3 +1,4 @@
+es
 @extends('layouts.app')
 
 @section('content')
@@ -129,7 +130,7 @@
                         
                             @foreach( $f["products"] as $p )
                             <div class="swiper-slide slide-pro" style="background: transparent !important ;">
-                                <a href="/mall/{{ $p->product_id }}" class="card p-2 w-100" style="border-radius: 20px ;text-decoration: none ;">
+                                <a href="/product/{{ $p->product_id }}" class="card p-2 w-100" style="border-radius: 20px ;text-decoration: none ;">
                                     <img src="{{ asset( $p->product_image ) }}" class="card-img-top" alt="...">
                                     <div class="card-body py-0 px-0">
                                         <div class="w-100 d-flex">
@@ -172,7 +173,10 @@
                 <hr>
                 @if( $countCategory % 2 == 0 )
                 @php
-                  $countBanner++;
+			if( $countBanner < (count($banners) - 1) ){
+			$countBanner++;
+		}
+                  //$countBanner++;
                 @endphp
                 <div class="swiper-container swiper-banners bnrs mt-5" style="height: auto ;">
                     <div class="swiper-wrapper">
